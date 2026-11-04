@@ -31,7 +31,7 @@ async function fetchPokemon(pokemon) {
     const result = await response.json();
     return {
         id: result["id"],
-        name: result["name"],
+        name: result["name"][0].toUpperCase() + result["name"].slice(1),
         image_url: result["sprites"]["other"]["official-artwork"]["front_default"],
     };
 }
