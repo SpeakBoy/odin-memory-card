@@ -1,8 +1,8 @@
-function Card() {
+function Card({ name, image_url }) {
     return (
         <div className="card">
-            <img src="/favicon.svg" alt="Villain" />
-            <p>VillainName</p>
+            <img src={image_url} alt={name}/>
+            <p>{name}</p>
         </div>
     );
 }
